@@ -12,10 +12,10 @@ class SatrancOyunu:
         self.secili_konum = None
         self.sira = "beyaz"
         
-        # Tahtayı oluştur (8x8 liste)
+        
         self.tahta = self.baslangic_tahtasi()
         
-        # Canvas oluştur
+        
         self.canvas = tk.Canvas(
             root, 
             width=self.kare_boyutu * self.tahta_boyutu,
@@ -23,15 +23,15 @@ class SatrancOyunu:
         )
         self.canvas.pack()
         
-        # Durum etiketi
+        
         self.durum_label = tk.Label(root, text="Sıra: Beyaz", font=("Arial", 14))
         self.durum_label.pack(pady=10)
         
-        # Yeniden başlat butonu
+        
         self.yenile_button = tk.Button(root, text="Yeni Oyun", command=self.yeni_oyun, font=("Arial", 12))
         self.yenile_button.pack(pady=5)
         
-        # Mouse tıklama olayı
+       
         self.canvas.bind("<Button-1>", self.tiklama)
         
         self.tahtayi_ciz()
